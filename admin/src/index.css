@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: smoother defaults (same spirit as portal) */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
