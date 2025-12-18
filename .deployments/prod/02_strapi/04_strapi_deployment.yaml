@@ -25,7 +25,7 @@ spec:
       containers:
         - name: sai-cms
           image: khedhrije/sai-cms:1.0.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 1337
