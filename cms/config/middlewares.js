@@ -6,6 +6,7 @@ module.exports = [
         name: 'strapi::cors',
         config: {
             origin: [
+                'https://sai-technologie.com',
                 'https://admin.sai-technologie.com',
                 'https://cms.sai-technologie.com'
             ],
