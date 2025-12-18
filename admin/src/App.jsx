@@ -227,7 +227,7 @@ export default function App() {
                 payload.confirmed = !!form.confirmed?.checked;
                 payload.blocked = !!form.blocked?.checked;
 
-                const roleId = formData.get("relation_role");
+                const roleId = formData.get("relation_user_role");
                 if (roleId) payload.role = Number(roleId);
 
                 await saveUser({ editingItem, payload });
@@ -247,7 +247,13 @@ export default function App() {
 
                 if (key.startsWith("relation_")) {
                     const realKey = key.replace("relation_", "");
-                    if (value && value !== "") payload[realKey] = value;
+
+                    if (value && value !== "") {
+                        payload[realKey] = {
+                            connect: [value],
+                        };
+                    }
+
                     continue;
                 }
 
@@ -264,7 +270,7 @@ export default function App() {
                 setIsSaving(false);
                 return;
             }
-            if (view === "pieces" && !payload.category) {
+            if (view === "pieces" && !payload.Category) {
                 showToast("Veuillez sélectionner une catégorie", "error");
                 setIsSaving(false);
                 return;

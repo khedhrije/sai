@@ -290,7 +290,7 @@ export default function EntityModal({
                                     <div>
                                         <CustomSelect
                                             label="Catégorie"
-                                            name="relation_category"
+                                            name="relation_Category"
                                             options={relationCategories || []}
                                             defaultValue={getRelationId(defaults.category)}
                                             placeholder="Sélectionner..."
