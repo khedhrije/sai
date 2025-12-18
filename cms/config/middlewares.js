@@ -2,7 +2,18 @@ module.exports = [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+    {
+        name: 'strapi::cors',
+        config: {
+            origin: [
+                'https://admin.sai-technologie.com',
+                'https://cms.sai-technologie.com'
+            ],
+            methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+            headers: ['Content-Type', 'Authorization'],
+            credentials: true,
+        },
+    },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',

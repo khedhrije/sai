@@ -24,7 +24,7 @@ spec:
 
       containers:
         - name: sai-cms
-          image: khedhrije/sai-admin:1.0.0
+          image: khedhrije/sai-cms:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
