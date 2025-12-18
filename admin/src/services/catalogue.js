@@ -42,10 +42,10 @@ export async function loadCatalogue() {
 
                 if (Array.isArray(photos) && photos.length) {
                     photos.forEach((p) => {
-                        if (p?.url) images.push(p.url.startsWith("/") ? `https://cms.khedhri.dev${p.url}` : p.url);
+                        if (p?.url) images.push(p.url.startsWith("/") ? `https://cms.sai-technologie.com${p.url}` : p.url);
                     });
                 } else if (photos?.url) {
-                    images.push(photos.url.startsWith("/") ? `https://cms.khedhri.dev${photos.url}` : photos.url);
+                    images.push(photos.url.startsWith("/") ? `https://cms.sai-technologie.com${photos.url}` : photos.url);
                 }
 
                 if (!images.length) {

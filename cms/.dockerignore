@@ -1,0 +1,20 @@
+# Secrets
+.env
+
+# Node / build
+node_modules
+.cache
+.build
+dist
+tmp
+*.log
+
+# Git
+.git
+
+# Uploads should be on PVC, not baked into image
+public/uploads
+
+# Misc
+Dockerfile.old
+README*

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sai-admin-service
+  namespace: sai-prod
+spec:
+  selector:
+    app: sai-admin
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 5173
+  type: ClusterIP
